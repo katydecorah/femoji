@@ -1,0 +1,55 @@
+---
+
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{{site.title}} - {{site.description}}</title>
+  <meta name="description" content="{{site.description}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{site.title}}">
+  <meta name="twitter:description" content="{{site.description}}">
+  <meta name="twitter:image" content="{{site.url}}/femoji.png">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{site.url}}" />
+  <meta property="og:title" content="{{site.title}}" />
+  <meta property="og:site_name" content="{{site.title}}" />
+  <meta property="og:description" content="{{site.description}}" />
+  <meta property="og:image" content="{{site.url}}/femoji.png" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="400" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://api.mapbox.com/mapbox-assembly/v0.12.0/assembly.min.css" rel="stylesheet">
+</head>
+<body class="bg-purple color-white">
+  <div class="p24 wmax1200 mx-auto">
+    <h1 class="txt-h1 my36 txt-bold txt-spacing2 txt-uppercase align-center color-lighten75">{{site.title}}</h1>
+    <div class="mb72 txt-l align-center">{{site.description}}</div>
+    <div class="grid grid--gut24 mb48">{% assign pack = site.data.femoji | sort: 'name' %}{% for femoji in pack %}{% assign name = femoji.name | replace: '.png','' | replace: ',jpg', '' | replace: '.gif', '' %}
+      <div class="col col--12 col--4-mm col--3-ml col--2-mxl mb24">
+        <a class="block round p24 femoji mb3 bg-white link link--purple shadow-darken25" href="https://github.com/katydecorah/femoji/blob/gh-pages/pack/{{femoji.name}}">
+          <img width="64" class="mx-auto block mb18" src="/pack/{{femoji.name}}" alt="{{name}}">
+          <div class="item-name align-center">:{{name}}:</div>
+        </a>{% if femoji.source_link %}
+        <div class="txt-s link link--lighten75 mb12 cite px12"><a href="{{femoji.source_link}}">{% if femoji.source_name %}{{femoji.source_name}}{% else %}source{% endif %}</a></div>{% endif %}
+      </div>{% endfor %}
+    </div>
+    <div class="align-center mb48">
+      <a href="https://github.com/katydecorah/femoji/blob/gh-pages/CONTRIBUTING.md" class="btn btn--white color-purple mb24 mb0-mm inline-block">Contribute to Femoji Club</a>
+      <a href="https://get.slack.help/hc/en-us/articles/206870177-Create-custom-emoji" class="btn btn--white color-purple ml12-mm inline-block">How do I add an emoji in Slack?</a>
+    </div>
+  </div>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-93524753-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+</body>
+</html>

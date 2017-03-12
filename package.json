@@ -1,0 +1,16 @@
+{
+  "name": "femoji-club",
+  "version": "0.0.0",
+  "description": "Femoji Club",
+  "author": "katydecorah",
+  "scripts": {
+    "test": "tape test/*.js | tap-spec"
+  },
+  "devDependencies": {
+    "image-size": "^0.5.1",
+    "js-yaml": "^2.1.3",
+    "request": "^2.72.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.5.1"
+  }
+}

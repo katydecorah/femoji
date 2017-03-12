@@ -1,0 +1,15 @@
+title: Femoji Club
+description: "Your Slack needs a :tampon:"
+url: http://femoji.club
+
+# Build settings
+markdown: kramdown
+
+gems:
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - REAMD.md
+  - CONTRIBUTING.md
