@@ -11,5 +11,5 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - REAMD.md
+  - README.md
   - CONTRIBUTING.md
