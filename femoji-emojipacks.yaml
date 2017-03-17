@@ -1,0 +1,7 @@
+---
+
+---
+title: femoji
+emojis:{% assign pack = site.data.femoji | sort: 'name' %}{% for femoji in pack %}{% assign name = femoji.name | replace: '.png','' | replace: '.jpg','' | replace: '.gif','' %}
+  - name: {{name}}
+    src: http://femoji.club/pack/{{femoji.name}}{% endfor %}
