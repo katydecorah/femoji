@@ -29,7 +29,7 @@
   <div class="p24 wmax1200 mx-auto">
     <h1 class="txt-h1 my36 txt-bold txt-spacing2 txt-uppercase align-center color-lighten75">{{site.title}}</h1>
     <div class="mb72 txt-l align-center">{{site.description}}</div>
-    <div class="grid grid--gut24 mb48">{% assign pack = site.data.femoji | sort: 'name' %}{% for femoji in pack %}{% assign name = femoji.name | replace: '.png','' | replace: ',jpg', '' | replace: '.gif', '' %}
+    <div class="grid grid--gut24 mb48">{% assign pack = site.data.femoji | sort: 'name' %}{% for femoji in pack %}{% assign name = femoji.name | replace: '.png','' | replace: '.jpg', '' | replace: '.gif', '' %}
       <div class="col col--12 col--4-mm col--3-ml col--2-mxl mb24">
         <a class="block round p24 femoji mb3 bg-white link link--purple shadow-darken25" href="https://github.com/katydecorah/femoji/blob/gh-pages/pack/{{femoji.name}}">
           <img width="64" class="mx-auto block mb18" src="/pack/{{femoji.name}}" alt="{{name}}">
